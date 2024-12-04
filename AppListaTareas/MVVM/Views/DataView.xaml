@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:AppListaTareas.MVVM.ViewModels"
+             x:Class="AppListaTareas.MVVM.Views.DataView"
+             Title="DataView">
+
+    <Grid RowDefinitions="Auto, *" Grid.Row="0" Margin="10">
+        <Button Text="Añadir Tarea" Command="{Binding AddTaskCommand}" FontSize="Medium" FontAttributes="Bold"/>
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Tasks}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="2*, 8*"
+                      RowDefinitions="*"
+                      Margin="10">
+                        <Frame Grid.Column="0"
+                       Padding="5"
+                       BorderColor="LightBlue"
+                       CornerRadius="8"
+                       VerticalOptions="Center">
+                            <Image HeightRequest="100"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"
+                           Source="{Binding ImageSubject}"/>
+                        </Frame>
+                        <VerticalStackLayout Grid.Column="1" Padding="10">                                            
+                            <Label Text="{Binding NameTask}"
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                            <HorizontalStackLayout>
+                                <Label Text="{Binding Description}"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label Text="Clasificación de importancia: "
+                                   FontAttributes="Italic"
+                                   FontSize="12"
+                                   TextColor="Black"/>
+                                <Label Text="{Binding ImportanceClassification}"
+                                   FontAttributes="Bold"
+                                   TextColor="Red"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label Text="Fecha de entrega: "
+                                   FontSize="12"
+                                   FontAttributes="Italic"
+                                   TextColor="Black"/>
+                                <Label Text="{Binding DeliveryDate, StringFormat='{0:dd/MM/yyyy}'}"
+                                   FontSize="12"
+                                   TextColor="Green"
+                                   FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label Text="Tarea Completada: "
+                                   FontAttributes="Italic"
+                                   FontSize="12"
+                                   TextColor="Black"/>
+                                <Label Text="{Binding TaskCompletes, Converter={StaticResource BoolToYesNoConverter}}"
+                                   FontAttributes="Bold"
+                                   TextColor="Green"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout>
+                                <Label Text="Tarea pendiente de entrega: "
+                                   FontAttributes="Italic"
+                                   FontSize="12"
+                                   TextColor="Black"/>
+                                <Label Text="{Binding PendingTask, Converter={StaticResource BoolToYesNoConverter}}"
+                                   FontAttributes="Bold"
+                                   TextColor="Green"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Spacing="10">
+                                <Button Text="Editar"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:DataViewModel}}, Path=EditCommand}"
+                                    CommandParameter="{Binding}"/>
+                                <Button Text="Eliminar"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:DataViewModel}}, Path=RemoveCommand}" 
+                                    CommandParameter="{Binding}" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

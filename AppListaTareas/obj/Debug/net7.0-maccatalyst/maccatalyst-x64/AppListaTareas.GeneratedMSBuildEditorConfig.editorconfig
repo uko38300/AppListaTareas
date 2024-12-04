@@ -1,0 +1,47 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AppListaTareas
+build_property.ProjectDir = /Volumes/DiscoDuroExterno/ProjectsVisualStudio_DesarrolloInterfaces/AppListaTareas/AppListaTareas/
+
+[/Volumes/DiscoDuroExterno/ProjectsVisualStudio_DesarrolloInterfaces/AppListaTareas/AppListaTareas/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppListaTareas.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Volumes/DiscoDuroExterno/ProjectsVisualStudio_DesarrolloInterfaces/AppListaTareas/AppListaTareas/MVVM/Views/AddTaskView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppListaTareas.MVVM.Views.AddTaskView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM/Views/AddTaskView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM/Views/AddTaskView.xaml
+
+[/Volumes/DiscoDuroExterno/ProjectsVisualStudio_DesarrolloInterfaces/AppListaTareas/AppListaTareas/MVVM/Views/DataView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppListaTareas.MVVM.Views.DataView.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM/Views/DataView.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM/Views/DataView.xaml
+
+[/Volumes/DiscoDuroExterno/ProjectsVisualStudio_DesarrolloInterfaces/AppListaTareas/AppListaTareas/MVVM/Views/EditTaskPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppListaTareas.MVVM.Views.EditTaskPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MVVM/Views/EditTaskPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MVVM/Views/EditTaskPage.xaml
+
+[/Volumes/DiscoDuroExterno/ProjectsVisualStudio_DesarrolloInterfaces/AppListaTareas/AppListaTareas/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppListaTareas.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Volumes/DiscoDuroExterno/ProjectsVisualStudio_DesarrolloInterfaces/AppListaTareas/AppListaTareas/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppListaTareas.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml

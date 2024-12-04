@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{FC96562B-8A16-48F9-8407-9F0D7C38544E}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AppListaTareas PreferredExecutionTarget="Android.Pixel_XL_API_30" />
+  <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_XL_API_30" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="33.0.95" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppListaTareas/App.xaml.cs">
+    <Files>
+      <File FileName="AppListaTareas/MVVM/Views/DataView.xaml" Line="16" Column="47" />
+      <File FileName="AppListaTareas/MVVM/Models/TaskItem.cs" />
+      <File FileName="AppListaTareas/MVVM/ViewModels/AddTaskViewModel.cs" />
+      <File FileName="AppListaTareas/MVVM/ViewModels/DataViewModel.cs" />
+      <File FileName="AppListaTareas/MVVM/Views/EditTaskPage.xaml" />
+      <File FileName="AppListaTareas/MVVM/Views/AddTaskView.xaml" />
+      <File FileName="AppListaTareas/MVVM/Views/AddTaskView.xaml.cs" />
+      <File FileName="AppListaTareas/MVVM/Views/EditTaskPage.xaml.cs" />
+      <File FileName="AppListaTareas/App.xaml.cs" Line="16" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AppListaTareas" expanded="True">
+            <Node name="AppListaTareas" expanded="True">
+              <Node name="MVVM" expanded="True">
+                <Node name="Converters" expanded="True" />
+                <Node name="Models" expanded="True" />
+                <Node name="ViewModels" expanded="True" />
+                <Node name="Views" expanded="True">
+                  <Node name="AddTaskView.xaml" expanded="True" />
+                  <Node name="DataView.xaml" expanded="True" />
+                  <Node name="EditTaskPage.xaml" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="App.xaml" expanded="True">
+                <Node name="App.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

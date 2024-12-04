@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppListaTareas.MVVM.Views.AddTaskView"
+             Title="AddTaskView">
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Entry Placeholder="Nombre de la Tarea" Text="{Binding NewTask.NameTask}" />
+        <Entry Placeholder="Descripción" Text="{Binding NewTask.Description}" />
+        <Entry Placeholder="Clasificación de Importancia (1-10)" 
+               Text="{Binding NewTask.ImportanceClassification}" Keyboard="Numeric" />
+        <DatePicker Date="{Binding NewTask.DeliveryDate}" />
+        <Label Text="¿Tarea completada?"/>
+        <Picker x:Name="TaskCompletePicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Si</x:String>
+                    <x:String>No</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Text="¿Tarea pendiente de entrega?"/>
+        <Picker x:Name="TaskPendingPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Sí</x:String>
+                    <x:String>No</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Text="Selecciona la asignatura de la tarea"/>
+        <CollectionView ItemsSource="{Binding SubjectImages}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedImage, Mode=TwoWay}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Horizontal" Span="1"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="5" BorderColor="Gray" CornerRadius="8" Margin="10"
+                   BackgroundColor="{Binding ., Converter={StaticResource SelectedItemConverter}, ConverterParameter={Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.SelectedImage}}">
+
+                        <Image Source="{Binding}" HeightRequest="50" WidthRequest="50">
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.SelectedImageCommand}"
+                                                      CommandParameter="{Binding}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Guardar" Command="{Binding SaveCommand}" />
+    </VerticalStackLayout>
+</ContentPage>

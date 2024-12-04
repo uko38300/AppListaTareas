@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppListaTareas.MVVM.Views.EditTaskPage"
+             Title="EditTaskPage">
+    <VerticalStackLayout>
+        <Entry x:Name="TaskNameEntry"
+               Placeholder="Nombre de la tarea"
+               Text="{Binding _task.NameTask}"/>
+        <Entry x:Name="TaskDescriptionEntry"
+               Placeholder="Descripcion de la tarea"
+               Text="{Binding _task.Description}"/>
+        <Entry x:Name="TaskImportanceEntry"
+               Placeholder="Importancia de la tarea (1-10)"
+               Text="{Binding _task.ImportanceClassification}"
+               Keyboard="Numeric"/>
+        <DatePicker x:Name="TaskDatePicker"
+                    Date="{Binding _task.DeliveryDate}"/>
+        <Label Text="¿Tarea completada?"/>
+        <Picker x:Name="TaskCompletePicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Si</x:String>
+                    <x:String>No</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="¿Tarea pendiente de entrega?"/>
+        <Picker x:Name="TaskPendingPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Sí</x:String>
+                    <x:String>No</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Text="Guardar" Clicked="SaveButton_Clicked"/>
+            
+    </VerticalStackLayout>
+</ContentPage>
